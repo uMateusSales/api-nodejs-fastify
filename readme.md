@@ -1,30 +1,12 @@
-Yarn run dev to start the server
+Repositório inicial para criar API. Feita com Typescript e Fastify . A conexão padrão neste projeto é com um db gerado pelo Knex ja que o intuito do projeto seria pra estudo de regras de negocio 
 
+Primeros pasos
+Execute npm install para instalar as dependências. Execute npm run dev para iniciar o serviço.
 
-Routes ==> 
+Crie novas transações no banco de dados adicionando na rota POST de "/transactions" ela recebe os dados de quantidade, tipo e o nome da transação
 
-By default its its going tu use 3333 port
+Cheque o extrato das transações do usuario da session atual com a rota GET de "/transactions/summary"
 
-/GET - List all transactions in your session
+Uma nova sessão é criada a partir da primeira transação feita
 
-/POST - Create new transaction with the folowwing data = { amount, type, name }
-
-/GET/SUMMARY - List the total balance 
-
-
-
-
-
-
-#RF
-
--O usuario pode criar uma nova transação;
--O usuário deve poder obter um resumo da conta;
--O usuario podera listar transações que ja ocorreram;
--O usuario deve poder visualizar uma transação unica;
-
-#RN
-
--A transação pode ser do tipo crédito que vai somar ao valor total, e débito que subtrairá;
--Deve ser possivel indetifircamos o usuario entre as requisições;
--O usuario só podera visualizar as transações a qual criou;
+Testes da rotas também disponiveis 
